@@ -29,13 +29,13 @@ const Banner = () => {
       </div>
       <div className='flex text-white text-2xl mx-auto max-w-max pt-4 lg:pt-6 gap-x-6' data-aos="fade-up">
         <a href="#">
-          <FaYoutube/>
+          <FaYoutube />
         </a>
         <a href="#">
-          <FaDribbble/>
+          <FaDribbble />
         </a>
         <a href="#">
-          <FaGithub/>
+          <FaGithub />
         </a>
       </div>
     </div>

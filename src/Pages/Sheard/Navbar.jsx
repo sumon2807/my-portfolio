@@ -165,16 +165,16 @@ const Navbar = () => {
         </nav>
         <nav className='fixed top-1/2 w-full overflow-hidden z-50 max-w-screen-xl'>
             <div className='grid gap-6 pl-8 text-xl text-white'>
-                <Link to='/' className='cursor-pointer text-accent'>
+                <Link to='/' className='cursor-pointer text-slate-700 hover:text-accent'>
                     <BiHomeAlt/>
                 </Link>
-                <Link to='about' className=' cursor-pointer text-accent'>
+                <Link to='about' className=' cursor-pointer text-slate-700 hover:text-accent'>
                     <BsClipboardData/>
                 </Link>
-                <Link to='project' className=' cursor-pointer text-accent'>
+                <Link to='project' className=' cursor-pointer text-slate-700 hover:text-accent'>
                     <BiUser/>
                 </Link>
-                <Link to='contact' className=' cursor-pointer text-accent'>
+                <Link to='contact' className=' cursor-pointer text-slate-700 hover:text-accent'>
                     <BsBriefcase/>
                 </Link>
             </div>
