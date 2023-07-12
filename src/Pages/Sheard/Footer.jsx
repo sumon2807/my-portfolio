@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer>
-            <div className="sm:footer lg:footer-center md:footer-center xl:footer-center p-10 bg-neutral text-neutral-content">
+        <footer className='mt-8'>
+            <div className="sm:footer lg:footer-center md:footer-center xl:footer-center p-10 bg-neutral text-neutral-content rounded-lg">
                 <div className='footer-center'>
                     <span className="footer-title" style={{ fontFamily: 'Kaushan Script' }}>Social</span>
                     <div className="flex justify-center items-center gap-4">
@@ -15,7 +15,7 @@ const Footer = () => {
             </div>
             <div className="footer footer-center p-4 bg-base-300 text-base-content" style={{ fontFamily: 'Kaushan Script'}}>
                 <div>
-                    <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+                    <p>Copyright © 2023 - All right reserved by SI Sumon portfolio</p>
                 </div>
             </div>
         </footer>
