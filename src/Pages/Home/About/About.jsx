@@ -3,10 +3,21 @@ import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer'
 import Image from '../../../assets/images/about/pro-removebg-preview.png'
 
+const PDF_FILE_URL='http://localhost:5173/my-resume.pdf'
 const About = () => {
     const [ref, inView] = useInView({
         threshold: 0.5,
     });
+
+    const downloadFileAtURL=(url)=>{
+        const fileName=url.split("/public/my-resume.pdf").pop();
+        const aTag=document.createElement("a");
+        aTag.href=url;
+        aTag.setAttribute("download", fileName);
+        document.body.appendChild(aTag);
+        aTag.click();
+        aTag.remove();
+    }
     return (
         <section ref={ref}>
             <div className='flex flex-col gap-y-10 lg:flex-row lg:items-center lg:gap-x-10 lg:gap-y-0 h-screen max-w-screen-xl lg:px-4'>
@@ -47,6 +58,10 @@ const About = () => {
                             <div className='font-bold text-sm tracking-[2px]'>Satisfied <br />
                                 Clients</div>
                         </div>
+                    </div>
+                    <div>
+                    <button className='btn text-white btn-sm border border-solid rounded-lg py-2 px-4 mr-4'>Hire Me</button>
+                    <button onClick={()=>{downloadFileAtURL(PDF_FILE_URL)}} className='btn text-white btn-sm border border-solid rounded-lg py-2 px-4'>Download CV</button>
                     </div>
                 </div>
             </div>

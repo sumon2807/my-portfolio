@@ -40,7 +40,7 @@ const Portfolio = () => {
         <section>
             <div className='flex items-center justify-around flex-wrap'>
                 <div className='mb-7 sm:mb-0'>
-                    <h3 className='text-2xl font-bold text-accent' style={{ fontFamily: 'Kaushan Script' }}>My Recent Projects</h3>
+                    <h3 className='text-[2.4rem] font-bold text-accent' style={{ fontFamily: 'Kaushan Script' }}>My Recent Projects</h3>
                 </div>
 
                 <div className='flex gap-3'>
