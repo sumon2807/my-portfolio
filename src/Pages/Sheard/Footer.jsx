@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className='mt-8'>
-            <div className="sm:footer lg:footer-center md:footer-center xl:footer-center p-10 bg-neutral text-neutral-content rounded-lg">
+        <footer className='mt-8 w-full'>
+            <div className="sm:footer lg:footer-center md:footer-center xl:footer-center p-10 bg-neutral text-neutral-content ">
                 <div className='footer-center'>
                     <span className="footer-title" style={{ fontFamily: 'Kaushan Script' }}>Social</span>
                     <div className="flex justify-center items-center gap-4">

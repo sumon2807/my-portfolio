@@ -4,9 +4,7 @@ import Navbar from "../Pages/Sheard/Navbar";
 const Main = () => {
     return (
         <div>
-            <Navbar></Navbar>
             <Outlet></Outlet>
-            <Footer></Footer>
         </div>
     );
 };

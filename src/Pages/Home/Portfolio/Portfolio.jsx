@@ -58,12 +58,12 @@ const Portfolio = () => {
                             data-aos="fade-zoom-in"
                             data-aos-delay="50"
                             data-aos-duration="1000"
-                            className='group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative z-[1]'>
+                            className='group max-w-full sm:w-[48.5%] md:w-[31.8%] lg:w-[32.2%] relative '>
                             <figure>
                                 <img className=' rounded-lg' src={portfolio.imgUrl} alt="" />
                             </figure>
 
-                            <div className='w-full h-full bg-accent bg-opacity-50 absolute top-0 left-0 z-[5] hidden group-hover:block'>
+                            <div className='w-full h-full bg-accent bg-opacity-50 absolute top-0 left-0 hidden group-hover:block'>
                                 <div className='w-full h-full flex justify-center items-center'>
                                     <button onClick={()=>showModalHandeler(portfolio.id)} className='text-white bg-slate-800 hover:bg-accent py-2 px-4 rounded-lg font-medium ease-in duration-200'>See Details</button>
                                 </div>

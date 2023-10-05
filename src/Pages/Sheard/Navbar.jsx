@@ -1,187 +1,65 @@
 import React, { useState } from 'react';
-import {BiHomeAlt, BiUser} from 'react-icons/bi';
-import {BsClipboardData, BsBriefcase, BsChatSquare} from 'react-icons/bs';
-import { Link } from 'react-scroll';
+import { FaCodiepie, FaRegWindowClose, FaBars } from 'react-icons/fa';
 
 const Navbar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [open, setOpen] = useState(false);
 
-    const toggleNavbar = () => {
-        setIsOpen(!isOpen);
-    };
-
+    const Links = [
+        { name: "Home", link: "/" },
+        { name: "About", link: "/" },
+        { name: "Service", link: "/" },
+        { name: "Blogs", link: "/" },
+        { name: "Contact", link: "/" },
+    ]
     return (
-        <>
-        <nav className="fixed top-0 w-full overflow-hidden z-50 max-w-screen-xl" style={{ fontFamily: 'Kaushan Script', fontSize: '2rem' }}>
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                        <div className="flex-shrink-0">
-                            <a href="/" className="text-accent font-bold text-2xl" >
-                                Portfolio
-                            </a>
-                        </div>
-                    </div>
-                    <div className="hidden md:block">
-                        <div className="ml-10 flex items-baseline space-x-4">
-                            <a
-                                href="/"
-                                className="text-accent hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                            >
-                                Home
-                            </a>
-                            <a
-                                href="/projects"
-                                className="text-accent hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                            >
-                                Projects
-                            </a>
-                            <a
-                                href="/about"
-                                className="text-accent hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                            >
-                                About
-                            </a>
-                            <a
-                                href="/contact"
-                                className="text-accent hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium" 
-                            >
-                                Contact
-                            </a>
-                        </div>
-                    </div>
-                    <div className="-mr-2 flex md:hidden">
-                        <button
-                            onClick={toggleNavbar}
-                            type="button"
-                            className="bg-gray-900 inline-flex transi items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
-                            aria-controls="mobile-menu"
-                            aria-expanded="false"
-                        >
-                            <span className="sr-only">Open main menu</span>
-                            {!isOpen ? (
-                                <svg
-                                    className="block h-6 w-6"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M4 6h16M4 12h16M4 18h16"
-                                    />
-                                </svg>
-                            ) : (
-                                <svg
-                                    className="block h-6 w-6"
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                    aria-hidden="true"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M6 18L18 6M6 6l12 12"
-                                    />
-                                </svg>
-                            )}
-                        </button>
-                    </div>
-                </div>
-            </div>
-            {/* {isOpen &&  (
-                <div className="md:hidden " id="mobile-menu">
-                    <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 transition-opacity duration-500">
-                        <a
-                            href="/"
-                            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            Home
-                        </a>
-                        <a
-                            href="/projects"
-                            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            Projects
-                        </a>
-                        <a
-                            href="/about"
-                            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            About
-                        </a>
-                        <a
-                            href="/contact"
-                            className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            Contact
-                        </a>
-                    </div>
-                </div>
-            )}
-        </nav>
-    );
-}; */}
+        <div className="drawer drawer-end z-10">
+            <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+            <div className="drawer-content">
+                {/* Page content here */}
 
-            <div
-                className={`md:hidden transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'
-                    }`}
-                id="mobile-menu"
-            >
-                <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                    <a
-                        href="/"
-                        className="text-accent hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                        Home
-                    </a>
-                    <a
-                        href="/about"
-                        className="text-accent hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                        About
-                    </a>
-                    <a
-                        href="/projects"
-                        className="text-accent hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                        Projects
-                    </a>
-                    <a
-                        href="/contact"
-                        className="text-accent hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                    >
-                        Contact
-                    </a>
-                </div>
+                <label htmlFor="my-drawer-4">
+                    <div onClick={() => setOpen(!open)} id='manu-icon' className={`absolute lg:right-4 right-4 lg:top-6 top-3 `}>
+                        {open === true ?
+                            <FaRegWindowClose />
+                            :
+                            <FaBars />
+                        }
+                    </div></label>
             </div>
-        </nav>
-        <nav className='fixed top-1/2 w-full overflow-hidden z-50 max-w-screen-xl'>
-            <div className='grid gap-6 pl-8 text-xl text-white'>
-                <Link to='/' className='cursor-pointer text-slate-700 hover:text-accent'>
-                    <BiHomeAlt/>
-                </Link>
-                <Link to='about' className=' cursor-pointer text-slate-700 hover:text-accent'>
-                    <BsClipboardData/>
-                </Link>
-                <Link to='project' className=' cursor-pointer text-slate-700 hover:text-accent'>
-                    <BiUser/>
-                </Link>
-                <Link to='contact' className=' cursor-pointer text-slate-700 hover:text-accent'>
-                    <BsBriefcase/>
-                </Link>
+            <div className="drawer-side">
+                <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
+                <ul className="menu lg:pt-16 pt-12 w-52 min-h-full bg-gray-800">
+                    {/* Sidebar content here */}
+                    {
+                        Links.map((link) => (
+                            <li key={link.name} className=''>
+                                <a href={link.link} className='hover duration-500 hover:bg-white'>{link.name}</a>
+                            </li>
+                        ))
+                    }
+                </ul>
             </div>
-        </nav>
-        
-        </>
+        </div>
     );
 };
 
 export default Navbar;
+
+{/* <div className='z-[10] bg-red-400 '>
+            <div onClick={() => setOpen(!open)} id='manu-icon' className={`absolute right-10 top-6 cursor-pointer max-w-screen-xl`}>
+                {open === true ?
+                    <FaRegWindowClose />
+                    :
+                    <FaBars />
+                }
+            </div>
+                <ul className={` absolute transition-all duration-500 ease-in text-white ${open ? 'right-10' : '-right-32'}`}>
+                    {
+                        Links.map((link) => (
+                            <li key={link.name} className=''>
+                                <a href={link.link} className='hover duration-500'>{link.name}</a>
+                            </li>
+                        ))
+                    }
+                </ul>
+        </div> */}
