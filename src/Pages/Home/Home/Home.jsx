@@ -5,6 +5,7 @@ import Services from '../Services/Services';
 import Portfolio from '../Portfolio/Portfolio';
 import Footer from '../../Sheard/Footer';
 import Navbar from '../../Sheard/Navbar';
+import img from '../../../../public/assets/images/about/pro-removebg-preview.png'
 
 const Home = () => {
     return (
@@ -24,7 +25,7 @@ const Home = () => {
                 <div className="lg:w-72 w-80  bg-gray-900 min-h-full" >
                     <div className="avatar online flex flex-col justify-center items-center bg-gray-800 lg:pt-4 pt-4">
                         <div className="w-32 rounded-full border-2 ">
-                            <img src="https://ibb.co/G0q1BL9" />
+                            <img src={img} />
                         </div>
                         <div className='text-center pt-4'>
                             <h1 className='font-bold'>Shariful Islam</h1>
