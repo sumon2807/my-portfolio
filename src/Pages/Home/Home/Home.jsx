@@ -6,6 +6,7 @@ import Portfolio from '../Portfolio/Portfolio';
 import Footer from '../../Sheard/Footer';
 import Navbar from '../../Sheard/Navbar';
 import img from '../../../../public/assets/images/about/pro-removebg-preview.png'
+import About from '../About/About';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
                 <label htmlFor="my-drawer-2" className=" absolute top-0 left-0 btn btn-ghost drawer-button lg:hidden"><FaEllipsisV /></label>
                 <Navbar></Navbar>
                 <Banner></Banner>
+                <About></About>
                 <Services></Services>
                 <Portfolio></Portfolio>
                 <Footer></Footer>

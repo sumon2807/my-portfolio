@@ -9,7 +9,7 @@ const Services = () => {
     return (
         <section>
             <div className='text-center'>
-                <h2 className='text-accent font-bold text-[2.4rem] mb-5 mt-10' style={{ fontFamily: 'Kaushan Script'}}>What do I help</h2>
+                <h2 className='text-accent font-bold text-[2.4rem] mb-5' style={{ fontFamily: 'Kaushan Script'}}>What do I help</h2>
                 <p className='lg:max-w-xl lg:mx-auto font-medium text-base leading-7'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae doloribus adipisci exercitationem. Recusandae, dolores repellendus, a ullam quasi ratione at possimus nobis amet debitis architecto odit eligendi. Perferendis, laboriosam dolores?</p>
             </div>
 
